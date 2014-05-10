@@ -1,0 +1,60 @@
+name:                leprosorium-captcha-recognizer
+version:             0.1.0.0
+synopsis:            Leprosorium.ru captcha recognizer
+description:         Leprosorium.ru captcha recognizer
+homepage:            http://eax.me/captcha-recognition/
+license:             BSD3
+license-file:        LICENSE
+author:              Alexander Alexeev
+maintainer:          mail@eax.me
+-- copyright:           
+category:            AI
+build-type:          Simple
+-- extra-source-files:  
+cabal-version:       >=1.10
+data-dir:           data
+data-files:         *.png
+
+executable leprosorium-captcha-neuralnetwork-backpropagation
+  ghc-options:         -O2 -Wall -fno-warn-missing-signatures -fno-warn-unused-do-bind -threaded -rtsopts
+  main-is:             NeuralNetworkBackpropagationMain.hs
+  build-depends:       base >= 4.6 && < 4.8,
+                       random >= 1.0 && < 1.1,
+                       simple-neural-networks >= 0.2 && < 0.3,
+                       deepseq >= 1.3 && < 1.4,
+                       containers >= 0.5 && < 0.6,
+                       parallel >= 3.2 && < 3.3,
+                       split >= 0.2 && < 0.3
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable leprosorium-captcha-recognizer-ga-step
+  ghc-options:         -O2 -Wall -fno-warn-missing-signatures -threaded -rtsopts
+  main-is:             GeneticAlgorithmStepMain.hs
+  build-depends:       base >= 4.6 && < 4.8,
+                       random >= 1.0 && < 1.1,
+                       simple-genetic-algorithm >= 0.2 && < 0.3,
+                       deepseq >= 1.3 && < 1.4,
+                       JuicyPixels >= 3.0 && < 4.0,
+                       JuicyPixels-util >= 0.1 && < 0.2,
+                       JuicyPixels-canvas >= 0.1 && < 0.2
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+
+executable leprosorium-captcha-recognizer
+  ghc-options:         -O2 -Wall -fno-warn-missing-signatures -fno-warn-unused-do-bind -threaded -rtsopts
+  main-is:             LeprosoriumCaptchaRecognizerMain.hs
+  build-depends:       base >= 4.6 && < 4.8,
+                       random >= 1.0 && < 1.1,
+                       simple-neural-networks >= 0.2 && < 0.3,
+                       deepseq >= 1.3 && < 1.4,
+                       containers >= 0.5 && < 0.6,
+                       parallel >= 3.2 && < 3.3,
+                       split >= 0.2 && < 0.3,
+                       JuicyPixels >= 3.0 && < 4.0,
+                       JuicyPixels-util >= 0.1 && < 0.2,
+                       simple-genetic-algorithm >= 0.2 && < 0.3,
+                       simple-neural-networks >= 0.2 && < 0.3
+  hs-source-dirs:      src
+  default-language:    Haskell2010
