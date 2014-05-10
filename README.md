@@ -13,7 +13,7 @@ How to build:
 Usage:
 
 ```
-./.cabal-sandbox/bin/leprosorium-captcha-recognizer +RTS -N -RTS captcha.png
+./.cabal-sandbox/bin/leprosorium-captcha-recognizer +RTS -N -RTS ./data/captcha2_qkxzko.png
 ```
 
 For more details see:
