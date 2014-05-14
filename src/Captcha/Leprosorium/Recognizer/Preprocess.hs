@@ -17,12 +17,10 @@ imageToWhiteAndBlack :: Image PixelRGBA8 -> IO (Image Pixel8)
 imageToWhiteAndBlack img =
   withImage 250 60 $
     \x y -> return $ 
-              if isBorder x y
+              let px = pixelAt img x y in
+              if isBorder x y || px == backgroundColor
                 then white
-                else let px = pixelAt img x y
-                     in if px == backgroundColor
-                          then white
-                          else black
+                else black
 
 removeNoise :: Image Pixel8 -> IO (Image Pixel8)
 removeNoise img = do
