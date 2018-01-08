@@ -5,7 +5,7 @@ Leprosorium.ru captcha recognizer.
 
 How to build:
 
-1. Install Haskell Platform http://www.haskell.org/platform/
+1. Install Haskell Platform https://www.haskell.org/platform/
 2. `git clone ... && cd ...`
 3. `cabal sandbox init`
 4. `cabal install`
@@ -18,6 +18,6 @@ Usage:
 
 For more details see:
 
-* http://eax.me/captcha-recognition/
-* http://eax.me/haskell-genetic-algorithm/
-* http://eax.me/haskell-neural-networks/
+* https://eax.me/captcha-recognition/
+* https://eax.me/haskell-genetic-algorithm/
+* https://eax.me/haskell-neural-networks/
